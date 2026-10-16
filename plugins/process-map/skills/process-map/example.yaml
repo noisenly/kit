@@ -1,0 +1,54 @@
+# Esempio inventato: una piccola agenzia, dal contatto alla fattura.
+name: Agenzia — dal lead alla fattura
+currency: EUR
+hourly_rate: 40          # costo medio di un'ora di lavoro
+departments:
+  - name: Vendite
+    steps:
+      - id: lead-intake
+        name: Raccolta lead dal form
+        owner: Sales
+        status: live           # live | testing | idea
+        minutes_per_month: 180
+        tools: [{name: Typeform, cost: 29}, {name: HubSpot, cost: 20}]
+        next: [discovery-call]
+        instructions: Ogni lead dal form entra in HubSpot con fonte e budget.
+      - id: discovery-call
+        name: Call conoscitiva
+        owner: Sales
+        status: live
+        minutes_per_month: 600
+        tools: [{name: Google Meet, cost: 0}, {name: HubSpot, cost: 20}]
+        next: [proposal]
+      - id: proposal
+        name: Preventivo
+        owner: Founder
+        status: testing
+        minutes_per_month: 480
+        tools: [{name: Google Docs, cost: 0}]
+        next: [kickoff]
+        instructions: Template preventivo in Drive; la bozza la scrive l'AI dai appunti della call.
+  - name: Delivery
+    steps:
+      - id: kickoff
+        name: Kickoff progetto
+        owner: PM
+        status: live
+        minutes_per_month: 240
+        tools: [{name: Linear, cost: 10}]
+        next: [invoice]
+  - name: Amministrazione
+    steps:
+      - id: invoice
+        name: Emissione fattura
+        owner: Admin
+        status: live
+        minutes_per_month: 120
+        tools: [{name: Software fatturazione, cost: 30}]
+        next: [invoice-archive]
+      - id: invoice-archive
+        name: Archiviazione automatica fatture
+        owner: Admin
+        status: idea
+        minutes_per_month: 0
+        instructions: Le fatture arrivano via mail e finiscono in una cartella per mese.

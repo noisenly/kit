@@ -1,0 +1,6 @@
+{
+  "name": "process-map",
+  "version": "0.1.0",
+  "description": "Map business processes to YAML and render them as an HTML page with a diagram and monthly costs.",
+  "author": { "name": "cervera.studio" }
+}

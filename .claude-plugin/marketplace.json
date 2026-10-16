@@ -1,0 +1,21 @@
+{
+  "name": "cervera-studio",
+  "owner": {
+    "name": "cervera.studio"
+  },
+  "metadata": {
+    "description": "Skills, agents and tools cervera.studio uses on real projects."
+  },
+  "plugins": [
+    {
+      "name": "workflow",
+      "source": "./plugins/workflow",
+      "description": "Harness agents (leader, implementer, reviewer, architect) and project templates for scoped, reviewed AI work."
+    },
+    {
+      "name": "process-map",
+      "source": "./plugins/process-map",
+      "description": "Map business processes to YAML and render them as an HTML page with a diagram and monthly costs."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "workflow",
+  "version": "0.1.0",
+  "description": "Harness agents (leader, implementer, reviewer, architect) and project templates for scoped, reviewed AI work.",
+  "author": { "name": "cervera.studio" }
+}
