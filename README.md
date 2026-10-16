@@ -4,7 +4,7 @@ Skill, agenti e strumenti che [cervera.studio](https://cervera.studio) usa su pr
 pubblicati come marketplace di plugin per Claude Code.
 
 ```
-/plugin marketplace add cervera-studio/kit
+/plugin marketplace add noisenly/kit
 /plugin install workflow@cervera-studio
 /plugin install process-map@cervera-studio
 ```
